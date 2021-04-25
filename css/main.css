@@ -293,4 +293,15 @@ body {
   padding: 2.5rem;
   text-align: center;
 }
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gallery__photo {
+  width: 100%;
+  display: block;
+}
 /*# sourceMappingURL=main.css.map */

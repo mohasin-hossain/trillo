@@ -175,3 +175,14 @@
   padding: 2.5rem;
   text-align: center;
 }
+
+////////////////////////////
+// GALLERY
+.gallery {
+  display: flex;
+
+  &__photo {
+    width: 100%;
+    display: block;
+  }
+}
