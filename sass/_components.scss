@@ -2,7 +2,12 @@
 // LOGO
 .logo {
   margin-left: 2rem;
-  height: 3.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--color-primary);
+  text-decoration: none;
 }
 
 //////////////////////////
