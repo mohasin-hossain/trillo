@@ -11,8 +11,8 @@
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
-  --shaodw-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
-  --shaodw-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   --line: 1px solid var(--color-grey-light-2);
 }
 
@@ -96,6 +96,44 @@ body {
       -ms-flex: 1;
           flex: 1;
   background-color: var(--color-pure-white);
+}
+
+.detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+  font-size: 1.4rem;
+}
+
+.description {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+  font-size: 1.4rem;
+  padding: 3rem;
+  margin-right: 4.5rem;
+  background-color: var(--color-pure-white);
+  -webkit-box-shadow: var(--shadow-light);
+          box-shadow: var(--shadow-light);
+}
+
+.user-reviews {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .logo {
@@ -395,8 +433,18 @@ body {
   transition: all 0.2s;
 }
 
+.btn-inline span {
+  margin-left: 3px;
+  -webkit-transition: margin-left .2s;
+  transition: margin-left .2s;
+}
+
 .btn-inline:hover {
   color: var(--color-grey-dark-1);
+}
+
+.btn-inline:hover span {
+  margin-left: 8px;
 }
 
 .btn-inline:focus {
@@ -445,5 +493,151 @@ body {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
+}
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+.list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-bottom: var(--line);
+  border-top: var(--line);
+  margin: 3rem 0;
+  padding: 3rem;
+}
+
+.list__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  margin-bottom: 0.7rem;
+}
+
+.list__item::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.7rem;
+  background-image: url(../img/chevron-thin-right.svg);
+  background-size: cover;
+}
+
+@supports (-webkit-mask-imaage: url()) or ((-webkit-mask-image: url()) or (mask-image: url())) {
+  .list__item::before {
+    -webkit-mask-image: url(../img/chevron-thin-right.svg);
+    -webkit-mask-size: cover;
+    mask-image: url(../img/chevron-thin-right.svg);
+    mask-size: cover;
+    background-color: var(--color-primary);
+    background-image: none;
+  }
+}
+
+.recommend {
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.recommend__count {
+  margin-right: auto;
+}
+
+.recommend__friends {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.recommend__photo {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: 3px solid var(--color-pure-white);
+}
+
+.recommend__photo:not(:first-child) {
+  margin-left: -2rem;
+}
+
+.review {
+  background-color: var(--color-pure-white);
+  margin-bottom: 3.5rem;
+  -webkit-box-shadow: var(--shadow-light);
+          box-shadow: var(--shadow-light);
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.review::before {
+  content: '\201C';
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 18rem;
+  line-height: 1;
+  top: -2.35rem;
+  left: -1rem;
+  color: var(--color-grey-light-2);
+}
+
+.review__text {
+  border-bottom: var(--line);
+  padding-bottom: 4rem;
+  z-index: 10;
+  position: relative;
+}
+
+.review__user {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.review__user-photo {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+
+.review__user-box {
+  margin-right: auto;
+}
+
+.review__user-name {
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.review__user-date {
+  font-size: 1rem;
+  color: var(--color-grey-dark-1);
+}
+
+.review__rating {
+  color: var(--color-primary);
+  font-size: 2.5rem;
+  font-weight: 300;
 }
 /*# sourceMappingURL=main.css.map */
