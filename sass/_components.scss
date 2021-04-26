@@ -1,8 +1,8 @@
 //////////////////////////
 // LOGO
 .logo {
-  height: 3.25rem;
   margin-left: 2rem;
+  height: 3.25rem;
 }
 
 //////////////////////////
@@ -12,6 +12,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: $bp-smallest) {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+  }
 
   &__input {
     font-size: inherit;
@@ -117,11 +123,24 @@
   font-size: 1.4rem;
   list-style: none;
 
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    margin: 0;
+  }
+
   &__item {
     position: relative;
 
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin: 0;
+      }
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
     }
   }
 
@@ -154,6 +173,16 @@
     align-items: center;
     z-index: 10;
     position: relative;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 2rem;
+      justify-content: center;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+      padding: 2rem 0.5rem;
+    }
   }
 
   &__icon {
@@ -161,6 +190,13 @@
     width: 1.75rem;
     fill: currentColor;
     margin-right: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 0;
+      margin-bottom: 0.7rem;
+    }
   }
 
   &__name {
@@ -175,6 +211,10 @@
   font-size: 1.2rem;
   padding: 2.5rem;
   text-align: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
 }
 
 ////////////////////////////
@@ -201,6 +241,11 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      padding: 1.2rem 1.5rem;
+    }
   }
 
   &__stars {
@@ -231,6 +276,11 @@
     padding: 0 2.25rem;
     align-self: stretch;
     margin-left: 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 1.5rem;
+      margin-left: 1rem;
+    }
   }
 
   &__rating-average {
@@ -375,6 +425,11 @@
   position: relative;
   overflow: hidden;
 
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+
   &::before {
     content: "\201C";
     position: absolute;
@@ -434,6 +489,10 @@
 .cta {
   padding: 3.5rem 0;
   text-align: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2.5rem 0;
+  }
 
   &__book-now {
     font-size: 2rem;
