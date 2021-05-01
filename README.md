@@ -1,8 +1,9 @@
 ## Trillo - All-in-one booking web app
 
-## Technologies
+## Tools used in this project
 
-- HTML
-- CSS FLEXBOX
-- SASS (SCSS)
-
+- CSS and SASS
+- CSS Flexbox
+- BEM (Block Element Modifier)
+- Use of CSS Color variables
+- Color-gradients
